@@ -1,0 +1,61 @@
+{
+    "module": {
+      "number": 1,
+      "name": "Math",
+      "questions": 30,
+      "revision": "2022-10-08"
+    },
+    "questions":[
+    {
+     "id": "name",
+     "text": "What is your name?",
+     "type": "text"
+   },
+   {
+     "id": "age",
+     "text": "What is your age?",
+     "type": "numeric"
+   },
+   {
+     "id": "col",
+     "text": "What is your favourite colour?",
+     "type": "text"
+   },
+   {
+     "id": "velo",
+     "text": "What is the air-speed velocity of an unladen swallow?",
+     "type": "number"
+   },
+   {
+     "id": "lord",
+     "text": "Which is the best lord?",
+     "type": "single-select",
+     "options": [
+       "Lord of the Rings",
+       "Lord of the Flies",
+       "Lord of the Dance",
+       "Lorde"
+     ],
+     "correct_answer": 4
+   },
+   {
+     "id": "langs",
+     "text": "Which computer languages have you used?",
+     "type": "multi-select",
+     "options": [
+       "JavaScript",
+       "Java",
+       "C",
+       "Python",
+       "Ook",
+       "LISP"
+     ],
+     "correct_answer": [2,3]
+   },
+   {
+    "id": "code",
+    "text": "class Solution(object):\n def addTwoNumbers(self, l1, l2): \n",
+    "type": "coding-fillup"
+  }
+   ]
+   }

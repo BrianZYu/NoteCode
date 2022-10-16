@@ -4,6 +4,7 @@ import React from 'react';
 import MarkdownTextView from './Components/MarkdownTextView';
 import { Question, QuizMetadata } from './Data Structures';
 import './QuizView.css'
+import './quizdesign.json'
 
 interface QuizViewProps {
     metadata: QuizMetadata
@@ -37,6 +38,25 @@ class QuizView extends React.Component<QuizViewProps, QuizViewState> {
             <div className='quiz-container'>
                 <h2 className='quiz-title'><MarkdownTextView rawText={this.props.metadata.quiz_title} /></h2>
                 <MarkdownTextView rawText={this.props.metadata.quiz_subtitle || undefined} />
+
+                    <div style={{padding: '10px', margin: '10px 0', border: '1px dashed lightgray'}}>
+                        <p> Which computer languages have you used?</p>
+                        <p>{'\t'}<input type="checkbox" name="langs" value="JavaScript"/>JavaScript</p>
+                        <p>{'\t'}<input type="checkbox" name="langs" value="Java"/>Java</p>
+                        <p>{'\t'}<input type="checkbox" name="langs" value="C"/>C</p>
+                        <p>{'\t'}<input type="checkbox" name="langs" value="Python"/>Python</p>
+                        <p>{'\t'}<input type="checkbox" name="langs" value="Ook"/>Ookt</p>
+                        <p>{'\t'}<input type="checkbox" name="langs" value="LISP"/>LISP</p>
+{/* 
+                        <ul> Which computer languages have you used?
+                        <li><input type="checkbox" name="langs" value="JavaScript"/>JavaScript</li>
+                        <li>Tea</li>
+                        <li>Milk</li>
+                        </ul> */}
+
+
+
+                    </div>
                 
                 {questions}
             </div>

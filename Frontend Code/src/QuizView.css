@@ -10,3 +10,42 @@
     margin-block-end: 0.8em;
 }
 
+
+.multi-heading{
+    letter-spacing: .13em;
+    text-align: center;
+    margin: auto;
+}
+
+.multi-select{
+    padding: 30; 
+    margin-left: 20px;
+    border: 1px dashed lightgray ;
+    font-family: "American Typewriter";
+    text-align: center;
+}
+
+.multi-options {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    align-items: center;
+    justify-content: space-around;
+    margin: 10px;
+}
+
+.multi-option{
+    width: 36%;
+    height: 20px;
+    padding: 20px 20px;
+    margin: 10px;
+    box-shadow: 0 0 2px black;
+}
+
+.multi-option:hover{
+    background: #d5bbf7;
+    border: 2px solid #ddd;
+    border-color: #8e498e;
+}
+

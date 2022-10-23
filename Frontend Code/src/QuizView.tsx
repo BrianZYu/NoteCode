@@ -42,7 +42,6 @@ class QuizView extends React.Component<QuizViewProps, QuizViewState> {
 
                     <div className='multi-select'>
                         <h3>Which computer languages have you used?</h3>
-                            <div className='multi-choices'> 
                             <div className='multi-options'>
                                 <label className='multi-option'><input type="checkbox" name="langs" value="JavaScript"/><span className="checkmark"></span>JavaScript</label>
                                 <label className='multi-option'><input type="checkbox" name="langs" value="Java"/><span className="checkmark"></span>Java</label>
@@ -50,7 +49,6 @@ class QuizView extends React.Component<QuizViewProps, QuizViewState> {
                                 <label className='multi-option'><input type="checkbox" name="langs" value="Python"/><span className="checkmark"></span>Python</label>
                                 <label className='multi-option'><input type="checkbox" name="langs" value="Ook"/><span className="checkmark"></span>Ookt</label>
                                 <label className='multi-option'><input type="checkbox" name="langs" value="LISP"/><span className="checkmark"></span>LISP</label>
-                            </div>
                             </div>
                     </div>
 

@@ -5,7 +5,7 @@ import MarkdownTextView from './Components/MarkdownTextView';
 import { Question, QuizMetadata } from './Data Structures';
 import './QuizView.css'
 import './quizdesign.json'
-import {useState} from 'react';
+// import {useState} from 'react';
 
 interface QuizViewProps {
     metadata: QuizMetadata
@@ -42,21 +42,33 @@ class QuizView extends React.Component<QuizViewProps, QuizViewState> {
                 <h2 className='quiz-title'><MarkdownTextView rawText={this.props.metadata.quiz_title} /></h2>
                 <MarkdownTextView rawText={this.props.metadata.quiz_subtitle || undefined} />
                     <div className='multi-select'>
-                        <h3>Which computer languages have you used?</h3>
+                        <h3 className='question-title'>Which computer languages have you used?</h3>
                             <div className='multi-options'>
-                                <label className='multi-option'><input type="checkbox" name="langs" value="JavaScript"/><span className="checkmark"></span>JavaScript</label>
-                                <label className='multi-option'><input type="checkbox" name="langs" value="Java"/><span className="checkmark"></span>Java</label>
-                                <label className='multi-option'><input type="checkbox" name="langs" value="C"/><span className="checkmark"></span>C</label>
-                                <label className='multi-option'><input type="checkbox" name="langs" value="Python"/><span className="checkmark"></span>Python</label>
-                                <label className='multi-option'><input type="checkbox" name="langs" value="Ook"/><span className="checkmark"></span>Ookt</label>
-                                <label className='multi-option'><input type="checkbox" name="langs" value="LISP"/><span className="checkmark"></span>LISP</label>
+
+                            <input type="checkbox" className='multi-checked' name="langs" value="JavaScript" id='multi-check-1'/>
+                            <label className='multi-option' htmlFor='multi-check-1'><span>JavaScript</span></label>
+                        
+                            <input type="checkbox" className='multi-checked' name="langs" value="Java" id='multi-check-2'/>
+                            <label className='multi-option' htmlFor='multi-check-2'><span>Java</span></label>
+
+                            <input type="checkbox" className='multi-checked' name="langs" value="C" id='multi-check-3'/>
+                            <label className='multi-option' htmlFor='multi-check-3'><span>C</span></label>
+
+                            <input type="checkbox" className='multi-checked' name="langs" value="Python" id='multi-check-4'/>
+                            <label className='multi-option' htmlFor='multi-check-4'><span>Python</span></label>
+
                             </div>
+
+                        <button className="button-multiselect-submit">Submit</button>
+
+                        <p className='multi-select-indicator'>Select Multiple Options</p>
+
+
+
+
                     </div>
                 {questions}
             </div>
-
-
-
         )
     }
 }

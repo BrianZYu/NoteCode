@@ -11,11 +11,65 @@
 }
 
 .multi-select{
-    padding: 30; 
+    padding: 3em;
     margin-left: 20px;
-    border: 1px dashed lightgray ;
-    font-family: "American Typewriter";
+    margin-top: 20px;
+    border-radius: 5px;
+    font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
     text-align: center;
+    background: #FCF7F3;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.button-multiselect-submit {
+  align-items: center;
+  background-clip: padding-box;
+  background-color: #fa6400;
+  border: 1px solid #fa6400;
+  border-radius: .25rem;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: system-ui,-apple-system,system-ui,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 1.25;
+  margin-top: 2em;
+  margin-bottom: .4em;
+  /* margin: 2em; */
+  min-height: 3rem;
+  padding: calc(.3rem - 1px) calc(1.5rem - 1px);
+  position: relative;
+  text-decoration: none;
+  transition: all 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  width: auto;
+}
+
+.button-multiselect-submit:hover,
+.button-5:focus {
+  background-color: #fb8332;
+  box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
+}
+
+.button-multiselect-submit:hover {
+  transform: translateY(-1px);
+}
+
+.button-multiselect-submit:active {
+  background-color: #c85000;
+  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  transform: translateY(0);
+}
+
+.question-title{
+    color: #FF7A2D;;
 }
 
 .multi-options {
@@ -25,7 +79,10 @@
     flex: 1;
     align-items: center;
     justify-content: space-around;
-    margin: 10px;
+    margin-bottom: 1.5em;
+    margin-top: 2.5em;
+    margin-left: .3em;
+    margin-right: 1em;
 }
 
 .multi-option{
@@ -33,12 +90,9 @@
     height: 20px;
     padding: 20px 20px;
     margin: 10px;
-    /* box-shadow: 0 0 2px black; */
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
     background: #EAE5E1;
-}
-
-.multi-option:checked{
-    background: #FF7A2D;
 }
 
 .multi-option:hover{
@@ -46,4 +100,21 @@
     border: 2px solid #ddd;
     border-color: #FF7A2D;
 }
+
+/* hiding the checkbox */
+.multi-checked{
+    opacity:0; 
+}
+
+.multi-checked:checked + .multi-option {
+    font-weight: bold;
+    background-color: #FF7A2D;
+    color: white;
+  }
+
+.multi-select-indicator{
+    font-size: 14px;
+    color: gray;
+}
+
 
